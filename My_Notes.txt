@@ -1,0 +1,117 @@
+we have 4 stages 
+working directory --. local
+staging area --> something btween worknig directory and local repo
+local repo  --> .git folder in local
+remote repo --> Git hub repo
+
+Firstly install git bash
+
+For checking Git installed
+git version in gitbash
+
+To configure gitbash
+git config --global --user.name "name"
+git config --global --user.email "github mail"
+
+To check configure is success
+git config --global --list
+
+To check diff b/w working directory, staging area, local repo, remote
+git status
+
+To add untracked file 
+git add filename ---> this cmd will add file in staging area
+git commit -m "message" ------->  this cmd will file to local repo
+git push origin master  -------> push file to remote (git hub)
+
+shortcut if we dont want ot use add 
+git commit -am "message" ----> direclty local repo
+
+To reanme a branch
+we have on that branch 
+git branch -m branch_name
+
+to make a new directory in local
+git init name
+
+To reverse a file back to working directory from staging area
+git rm --cached filename ---> delete from staging area
+git reset HEAD filename
+
+
+Fork ---> to make copy of someone project in our github account
+clone ---> git hub to our local
+
+To undo the changes
+unstage the file means file is in working directory
+git checkout -- filename
+
+To rename and move files
+git mv presentname newname --> chaneges ataged but we have to commit it 
+mv currename newname --> it is git bash cmd it perform two function firsly delete 
+			then create new with new name with same content so here we have to add to it
+			 to staging area & then commit	
+
+To move file to another directory
+fislty we have in directory in which file is present 
+git mv filname directory name
+
+To check which files are tracked by git
+git ls-files
+
+To see all the git log
+git log
+
+To see the differnce working working directory and staging area
+git diff
+
+To see the differnce working working directory and git rep(local)
+git diff HEAD
+
+To see the differnce working staging area and git repo(local)
+git --staged HEAD
+
+Branches
+
+To see out local and remote branch
+git branch -a
+
+To see all local branch
+git branch -v
+
+To create new branc
+git branch name
+
+TO switch new BRanch
+git checkout branchname
+
+To remane a branch
+git branch -m oldname newname
+
+To delete branch
+git branch -d name
+
+Git merge vs rebase
+
+history commit is stored in merge but not in rebase
+when we merge onr extra commit will make automaticalyy to store merge hsitory
+
+Stash
+
+whenevre we wnat to save our changes for some time (applied only on staged file)
+
+git stash  ---> save with any randm name
+git stash -m "name" -----> save with particluar name
+
+git stash apply --->> aplly the last change
+git stash apply stash@{numebr} --> that particular number is added
+git stash list
+git stash drop stash@{numer} --> particular numbre is droped
+git stash pop --> lastest stash is poped
+git stash clear --> cleat all data in stash
+
+
+Git pull vs clone vs fetch
+
+pull and clone -->> take changes from remote and save to working directory and local repo
+fetch ---> take chage from remote and save it to local repo
